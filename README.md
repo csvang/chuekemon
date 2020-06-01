@@ -68,6 +68,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 =======
-# chuekemon
-
->>>>>>> e3304df3489531b124f5ca4d19f1206e62d27129
