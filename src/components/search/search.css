@@ -1,0 +1,18 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filterBox {
+    padding-bottom: 25px;
+}
+
+.searchListMon {
+    cursor: pointer;
+}
+
+.monBox {
+    min-width: 500px;
+    padding: 25px;
+}
