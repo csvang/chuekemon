@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Modal, Header, Image } from 'semantic-ui-react';
 import {ShowModalContext} from '../../App'
 
+import './mons.css';
+
 function Mons({ showModal, mon }) { 
     const [displayModal, setDisplayModal] = useState(showModal)
     const [monData, setMonData] = useState([]);
@@ -32,12 +34,26 @@ function Mons({ showModal, mon }) {
                 <Modal.Content image>
                     <Image wrapped size='medium' src={`${process.env.PUBLIC_URL}/assets/mons/${mon}.png`} />
                     <Modal.Description>
-                        <Header style={styles.headerText}>#{mon} {monData.name}</Header>
+                        <Header style={styles.headerText}>
+                            #{mon} {monData.name}
+                        </Header>
+
+                        <div style={{all: "unset"}} className="typeCapsule">
+                            { 
+                                ( monData && monData.types) 
+                                ? 
+                                    monData.types.map(m => (
+                                    <div className={"typeCapsule " + m.type.name}>
+                                        {m.type.name}
+                                    </div>
+                                    ))
+                                :
+                                ''
+                            }
+                            </div>
                         <p>
-                            We've found the following gravatar image associated with your e-mail
-                            address.
+                           
                         </p>
-                        <p>Is it okay to use this photo?</p>
                     </Modal.Description>
                 </Modal.Content>
             </Modal>
